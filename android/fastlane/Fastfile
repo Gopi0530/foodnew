@@ -17,6 +17,11 @@ desc "Submit a new Beta Build to Play Store"
     )
     upload_to_play_store(
       track: 'internal',
-	  release_status: 'draft'
-	     )
-	end
+	  release_status: 'draft',
+          version_code:  get_version_code(
+    #app_folder_name:"project"
+    gradle_file_path:"project/build.gradle",
+    ext_constant_name:"versionName"
+  )
+       )
+end
