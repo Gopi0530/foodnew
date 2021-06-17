@@ -1,11 +1,3 @@
-lane :test do
-  get_version_code(
-    #app_folder_name:"project"
-    gradle_file_path:"project/build.gradle",
-    ext_constant_name:"versionName"
-  )
-
-end
 
 desc "Submit a new Beta Build to Play Store"
   lane :beta do
@@ -24,9 +16,18 @@ desc "Submit a new Beta Build to Play Store"
         "android.injected.signing.key.password" => key_password,
       }
     )
+
+    android_get_version_code(
+    gradle_file: "app/build.gradle" # optional
+  )
+
+  android_set_version_code(
+    version_code: 17, # optional, if not specified, Version Code will be incremented
+    gradle_file: "app/build.gradle" # optional
+  )
     upload_to_play_store(
       track: 'internal',
-	  release_status: 'draft',
-          version_code: get_version_code
+	  release_status: 'draft'
+          
        )
 end
