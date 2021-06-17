@@ -1,7 +1,7 @@
 desc "Submit a new Beta Build to Play Store"
   lane :beta do
-    store_password = prompt(text: "Signing Store Password: ", secure_text: true)
-    key_password = prompt(text: "Alias Key Password: ", secure_text: true)
+    store_password = "test12345"
+    key_password = "test12345"
     releaseFilePath = File.join(Dir.pwd, "..", "my-release-key.keystore")
     gradle(task: 'clean')
     gradle(
@@ -18,5 +18,5 @@ desc "Submit a new Beta Build to Play Store"
     upload_to_play_store(
       track: 'internal',
 	  release_status: 'draft'
-    )
+	     )
 	end
