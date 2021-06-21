@@ -135,7 +135,11 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 16
+<<<<<<< HEAD
         versionName "1.4"
+=======
+        versionName "1.6"
+>>>>>>> 083ea2270eb9772705d67a23df076101a73eaad7
     }
     splits {
         abi {
