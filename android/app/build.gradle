@@ -134,12 +134,17 @@ android {
         applicationId "com.foodnew"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+<<<<<<< HEAD
         versionCode 16
 <<<<<<< HEAD
         versionName "1.4"
 =======
         versionName "1.6"
 >>>>>>> 083ea2270eb9772705d67a23df076101a73eaad7
+=======
+        versionCode 23
+        versionName "1.3"
+>>>>>>> 73d274ae0c2e3530ef5062233c2b8c1f67368341
     }
     splits {
         abi {
